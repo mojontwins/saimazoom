@@ -1,0 +1,1297 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"rcube",
+				"rcube_sandetel\tabc"
+			],
+			[
+				"invalida",
+				"invalidate_request_token"
+			],
+			[
+				"all",
+				"all_extra_fields\tabc"
+			],
+			[
+				"search_res",
+				"search_result_line\tabc"
+			],
+			[
+				"searc",
+				"search_result_line\tabc"
+			],
+			[
+				"search",
+				"search_result_line\tabc"
+			],
+			[
+				"cache",
+				"cached_values\t(rcube_sandetel.php)"
+			],
+			[
+				"get_uid_fro",
+				"get_uid_from_uidshort\t(rcube_sandetel.php)"
+			],
+			[
+				"forbid",
+				"forbidden_styles\tabc"
+			],
+			[
+				"domains",
+				"domains_whitelist\tabc"
+			],
+			[
+				"domai",
+				"domains_whitelist\tabc"
+			],
+			[
+				"domain",
+				"domains_whitelist\t(avelsieve.php)"
+			],
+			[
+				"rcu",
+				"rcube_sandetel\tabc"
+			],
+			[
+				"wri",
+				"write_log\tabc"
+			],
+			[
+				"html",
+				"html_signature\tabc"
+			],
+			[
+				"sig",
+				"signature\tabc"
+			],
+			[
+				"str_rpe",
+				"str_replace"
+			],
+			[
+				"v3_contac",
+				"v3_contactgroup_id\tabc"
+			],
+			[
+				"v3_conta",
+				"v3_contactgroup\tabc"
+			],
+			[
+				"contactgrp",
+				"contactgroup_id\tabc"
+			],
+			[
+				"contactgroup",
+				"contactgroupmember\tabc"
+			],
+			[
+				"exis",
+				"existing_groups\tabc"
+			],
+			[
+				"roundcube",
+				"roundcubemail\tabc"
+			],
+			[
+				"round",
+				"roundcube\tabc"
+			],
+			[
+				"roudn",
+				"roundcube\tabc"
+			],
+			[
+				"mysqli",
+				"mysqli_query\tabc"
+			],
+			[
+				"resu",
+				"resultado\tabc"
+			],
+			[
+				"passca",
+				"pass_caducado\tabc"
+			],
+			[
+				"kill",
+				"kill_session\t(rcmail.php)"
+			],
+			[
+				"check",
+				"check_pass_caducado\tabc"
+			],
+			[
+				"auth_mth",
+				"auth_methods_supported\tabc"
+			],
+			[
+				"auth_methods",
+				"auth_methods_supported\tabc"
+			],
+			[
+				"janombreapellido",
+				"janombreapellidosarray\t(password.php)"
+			],
+			[
+				"wrti",
+				"write_log\tabc"
+			],
+			[
+				"ciphertext",
+				"ciphertext_dec\tabc"
+			],
+			[
+				"ciph",
+				"ciphertext_dec\tabc"
+			],
+			[
+				"home",
+				"homeDirectory\tabc"
+			],
+			[
+				"JA",
+				"JAwinFlag\tabc"
+			],
+			[
+				"employ",
+				"employeeNumber\tabc"
+			],
+			[
+				"user_em",
+				"user_email_address\tabc"
+			],
+			[
+				"transac",
+				"transaction_id\tabc"
+			],
+			[
+				"X",
+				"XPCOMUtils"
+			],
+			[
+				"DO",
+				"DOUBLE_WIDTH"
+			],
+			[
+				"addressboo",
+				"addressbook_export\t(export.inc)"
+			],
+			[
+				"bedework_rec",
+				"bedework_records_starting_with\t(simple_bedework_rest_client.php)"
+			],
+			[
+				"start",
+				"start_row"
+			],
+			[
+				"bedewo",
+				"bedework_client"
+			],
+			[
+				"allow",
+				"allow_report"
+			],
+			[
+				"bedew",
+				"bedework_client"
+			],
+			[
+				"bede",
+				"bedework_client"
+			],
+			[
+				"cookie",
+				"cookie_jar"
+			],
+			[
+				"curl",
+				"curl_setup"
+			],
+			[
+				"cooke",
+				"cookie_jar"
+			],
+			[
+				"coo",
+				"cookie_jar"
+			],
+			[
+				"current",
+				"current_rule"
+			],
+			[
+				"getg",
+				"get_group\t(list.inc)"
+			],
+			[
+				"rcmail",
+				"rcmail::write_log"
+			],
+			[
+				"grou",
+				"group_id"
+			],
+			[
+				"vcard_",
+				"vcard_filename"
+			],
+			[
+				"toa",
+				"total_entries"
+			],
+			[
+				"write",
+				"write_log"
+			],
+			[
+				"webdav_abook",
+				"webdav_abook_user_url"
+			],
+			[
+				"u",
+				"uid\t(rcube_webdav_addressbook.php)"
+			],
+			[
+				"webdav_aboo",
+				"webdav_abook_dir"
+			],
+			[
+				"sande",
+				"rcube_sandetel"
+			],
+			[
+				"uploadf",
+				"uploadform\t(app.js)"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"upload_pr",
+				"upload_progress_start\t(app.js)"
+			],
+			[
+				"upload_progres",
+				"upload_progress_time\t(app.js)"
+			],
+			[
+				"async",
+				"async_upload_form_consigna"
+			],
+			[
+				"prefsf",
+				"prefs_file"
+			],
+			[
+				"sqm",
+				"sqm_bookmarks_file"
+			],
+			[
+				"bookmar",
+				"bookmark_a"
+			],
+			[
+				"sq",
+				"sqm_bookmarks_file"
+			],
+			[
+				"pass",
+				"pass_caducado"
+			],
+			[
+				"permiso",
+				"permiso_organismo"
+			],
+			[
+				"labeled",
+				"labeledUri"
+			],
+			[
+				"nusoap",
+				"nusoap_client"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"num",
+				"numGroups"
+			],
+			[
+				"Hash",
+				"HashMap"
+			],
+			[
+				"dir",
+				"dirEscritura"
+			],
+			[
+				"modificaAtribu",
+				"modificaAtributoGUIA"
+			],
+			[
+				"modificaAtri",
+				"modificaAtributoGUIA"
+			],
+			[
+				"ExcepcionConex",
+				"ExcepcionConexionYaAbierta"
+			],
+			[
+				"codi",
+				"codides"
+			],
+			[
+				"marcaGUIa",
+				"marcaGUIAformateaSalida"
+			],
+			[
+				"ape",
+				"apellido2"
+			],
+			[
+				"usuariosEncontradosReservad",
+				"usuariosEncontradosReservadosDeMiTipo"
+			],
+			[
+				"usuariosEnco",
+				"usuariosEncontradosReservadosGUIA"
+			],
+			[
+				"usuariosEncontradosGUIA",
+				"usuariosEncontradosReservadosGUIA"
+			],
+			[
+				"usuarioEncontradosRe",
+				"usuariosEncontradosReservadosGUIA"
+			],
+			[
+				"codide",
+				"codide"
+			],
+			[
+				"trasladaUsuario",
+				"trasladaUsuarioLDAPdn"
+			],
+			[
+				"Baja",
+				"quitaEstadoBaja"
+			],
+			[
+				"usuariosEn",
+				"usuariosEncontradosReservadosGUIA"
+			],
+			[
+				"usuariosEncontradosReser",
+				"usuariosEncontradosReservadosGUIA"
+			],
+			[
+				"marcaUid",
+				"marcarUidGUIA"
+			],
+			[
+				"fadeout",
+				"fade_out_bucle"
+			],
+			[
+				"in",
+				"in_KeyPressed"
+			],
+			[
+				"use_pla",
+				"use_placement_x"
+			],
+			[
+				"music",
+				"music_play"
+			],
+			[
+				"PLA",
+				"PLAYER_VX_MIN"
+			],
+			[
+				"pobjs",
+				"pobjs_starter"
+			],
+			[
+				"ppu",
+				"ppu_wait_nmi"
+			],
+			[
+				"gp",
+				"gp_addr"
+			],
+			[
+				"PLAYER",
+				"PLAYER_VY_JUMP_MAX"
+			],
+			[
+				"PLAY",
+				"PLAYER_VY_FALLING_MAX"
+			],
+			[
+				"sp_",
+				"sp_PrintAtInv"
+			],
+			[
+				"TWO_SETS",
+				"TWO_SETS_MAPPED"
+			],
+			[
+				"TWO_SET",
+				"TWO_SETS_SEL"
+			],
+			[
+				"PSGSFX",
+				"PSGSFXPlay"
+			],
+			[
+				"PSG",
+				"PSGSFXPlay"
+			],
+			[
+				"MS_TYPE_",
+				"MS_TYPE_SINGLE"
+			],
+			[
+				"SG",
+				"SG_setTile"
+			],
+			[
+				"SG_",
+				"SG_setNextTileatXY"
+			],
+			[
+				"MS",
+				"MS_MAX"
+			],
+			[
+				"UNSA",
+				"UNSAFE_SG_copySpritestoSAT"
+			],
+			[
+				"UNS",
+				"UNSAFE_SG_copySpritestoSAT"
+			],
+			[
+				"MS_",
+				"MS_TYPE_EMPTY"
+			],
+			[
+				"pgo",
+				"pgotten_uwol"
+			],
+			[
+				"pgt",
+				"pgtmx_meemaid"
+			],
+			[
+				"PSTAT_",
+				"PSTATE_NAKED"
+			],
+			[
+				"draw_",
+				"draw_game_tile"
+			],
+			[
+				"FAN",
+				"FANTY_MAXV"
+			],
+			[
+				"show_",
+				"show_coins_vs"
+			],
+			[
+				"GP_",
+				"GM_2P_VS"
+			],
+			[
+				"PSTATE",
+				"PSTATE_DEAD"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "utils/mkts_om.bas",
+			"settings":
+			{
+				"buffer_size": 45556,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 132.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"beauti",
+				"Beautify::Beautify File"
+			],
+			[
+				"mini",
+				"Minify::Default File Settings"
+			],
+			[
+				"format",
+				"Format: Javascript"
+			],
+			[
+				"boxy",
+				"Boxy Theme: Preferences"
+			],
+			[
+				"markdow",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ter",
+				"Terminal: Open"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 382.0
+	},
+	"console":
+	{
+		"height": 118.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/git/saimazoom"
+	],
+	"file_history":
+	[
+		"/D/Proyectos/2023/20230207 - Fix redirección a cambio de password en Webmail con passCaducado/password.php",
+		"/D/Proyectos/2022/20221102c - Actualización leyenda cambio de password (Webmail)/password.php",
+		"/D/Proyectos/2023/20230216 - Reparación cambio de contraseña Webmail - URGENTE/instrucciones.txt",
+		"/D/Proyectos/CIs.txt",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/ldap_search/ldap_search.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/lib/Roundcube/rcube.php",
+		"/D/temp/delete_me/games_zx/helmet/diario.md",
+		"/D/git/MK1v4/wip/helmet.md",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/password/password.php",
+		"/D/Proyectos/2023/20230207 - Fix redirección a cambio de password en Webmail con passCaducado/instrucciones.txt",
+		"/D/Proyectos/2022/20220609a - Mejoras Webmail (ldap_search, MariaDB 10.5, etc)/instrucciones.txt",
+		"/C/Users/jcastano/Downloads/instrucciones (3).txt",
+		"/C/Users/jcastano/Downloads/password.php",
+		"/C/Users/jcastano/Downloads/pepsi2.bas",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/include/rcmail.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/index.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/lib/Roundcube/rcube_sandetel.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/lib/Roundcube/rcube_plugin_api.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/sandetel_login/sandetel_login.php",
+		"/D/Proyectos/2023/20230208 - Fix acceso a Webmail mediante SSOWeb de usuarios desautorizados/instrucciones.txt",
+		"/D/Proyectos/2022/20220916a - Reserva de Recursos 1.27.0.0/instrucciones.txt",
+		"/D/cosas/pepsi/pepsi2.bas",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/include/rcmail_output_html.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/js/app.js",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/_deactivated/markasjunk/markasjunk.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/skins/larry_sandetel/templates/login.html",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/include/iniset.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/simplesamlphp/lib/SimpleSAML/Memcache.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/consigna_attachments/consigna_attachments.js",
+		"/C/Users/jcastano/Desktop/pikapika.txt",
+		"/D/Proyectos/2022/20221214a - Desactivar rc_smime en Webmail/instrucciones.txt",
+		"/D/cosas/CPCbasic3/test1.bas",
+		"/D/Proyectos/remote/desowncl02/consultas_usuarios.md",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/simplesamlphp/config/authsources.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/simplesamlphp/config/config.php",
+		"/D/Proyectos/2023/20230132 - Reserva de Recursos v1.31.0.0 - Migración organismos Sync/instrucciones.txt",
+		"/C/Users/jcastano/Downloads/oc_accounts.csv",
+		"/D/Proyectos/2023/20230132 - Reserva de Recursos v1.31.0.0 - Migración organismos Sync/act-rr--20230102a/tpl/login.tpl",
+		"/D/git/nes_work/GoddessR/utils/colsmapper.bas",
+		"/C/Users/jcastano/Desktop/[SPAM]Correo marcado como basura que no lo es - Sonia Maria Torres Llanera (sonia.torres@juntadeandalucia.es) - 2023-01-31 0948.eml",
+		"/C/Users/jcastano/AppData/Local/Temp/7zO4F08B214/Nota sobre seriales animados.txt",
+		"/C/Users/jcastano/Downloads/pepsi.bas",
+		"/D/cosas/CPCbasic3/pepsi1.bas",
+		"/D/Proyectos/2022/20221125a - Webmail - arreglo adjuntos/rcube.php",
+		"/D/Proyectos/2022/20221125a - Webmail - arreglo adjuntos/instrucciones.txt",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/agendaapi/ldap.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/agendaapi/get_all/index.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/include/bc.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/lib/Roundcube/rcube_string_replacer.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/lib/Roundcube/rcube_washtml.php",
+		"/D/temp/MC_WORK/b1.9/src/minecraft/net/minecraft/src/Item.java",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/lib/Roundcube/rcube_utils.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/config/defaults.inc.php",
+		"/D/Proyectos/2022/20221102c - Actualización leyenda cambio de password (Webmail)/instrucciones.txt",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/ldap_search/localization/es_ES.inc",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/ldap_search/ldap_search.js",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/ldap_search/client.js",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/avelsieve/avelsieve.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/lib/Roundcube/html.php",
+		"/D/Proyectos/2022/20220527a - Reserva de Recursos 1.25.0.0/instrucciones.txt",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/password/password_strength.js",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/password/password.min.js",
+		"/C/Users/jcastano/AppData/Local/Temp/7zOCE5A4B81/org.multimc.jarmod.04980a57-9601-4a95-9981-92c6ddfa147a.json",
+		"/C/Users/jcastano/AppData/Local/Temp/7zOCE5B5561/mmc-pack.json",
+		"/D/git/MK1_Pestecera/src/dev/wyz_player.h",
+		"/D/Proyectos/remote/desccobuz05/diario.md",
+		"/D/Proyectos/remote/desccobuz05/diario - copia.md",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/ldap_search/config/config.inc.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/lib/Roundcube/rcube_contacts.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/new_user_identity/new_user_identity.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/lib/Roundcube/rcube_user.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/sandetel/sandetel.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/config/config.inc.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/program/steps/settings/save_identity.inc",
+		"/C/Users/jcastano/Desktop/LDAP Browser/makesuperadmin.ldif",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/ldap_search/config/config.inc.php.dist",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/ldap_search/config.inc.php.dist",
+		"/D/git-corp/webservice-corporativo/gestor-usuarios/src/es/sadesi/gestorusuarios/DirectorioCorporativoWS.java",
+		"/D/Proyectos/2022/20220405a - Ficheros v1.8.0.0 - clamav, uidshort, tags, misc/instrucciones.md",
+		"/C/Users/jcastano/Downloads/fichero.txt",
+		"/D/Proyectos/2022/20220321a - Webservice 1.22.0.0 - Corrección de problemas de seguridad/tomcat-users.xml",
+		"/D/Proyectos/2021/20210907a - Nuevo login - Consigna/instrucciones.txt",
+		"/D/Proyectos/2022/20220321a - Webservice 1.22.0.0 - Corrección de problemas de seguridad/instrucciones.txt",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/agata_addressbook/agata_addressbook.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/skins/larry_sandetel/addressbook.css",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/skins/larry_sandetel/includes/header.html",
+		"/D/Proyectos/2022/20220211a - ANEXO08-RFC-1067500-Acceso a Webmail por mail/instrucciones.txt",
+		"/D/temp/goe/index.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/password/password.js",
+		"/D/Proyectos/2022/20220211a - ANEXO08-RFC-1067500-Acceso a Webmail por mail/act-webmail--20220211a/plugins/sandetel_login/sandetel_login.php",
+		"/D/temp/goe/showcomic.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/skins/larry_sandetel/includes/appbar.html",
+		"/D/Proyectos/2021/20211116b - Corrección enlace términos de uso en Webmail/instrucciones.txt",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/simplesamlphp/metadata/saml20-idp-remote.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/simplesamlphp/cert/server.crt",
+		"/D/Proyectos/2021/20211116a - Integración de Webmail con SSOWeb adAS/authsources.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/simplesamlphp/cert/server.pem",
+		"/D/Proyectos/2021/20211116a - Integración de Webmail con SSOWeb adAS/instrucciones.txt",
+		"/C/Users/jcastano/Downloads/adasSSOPreproduccion.xml(1).txt",
+		"/D/Proyectos/2020/20200608a - Actualización Reserva de Recursos 1.13.0.0/instrucciones.txt",
+		"/D/Proyectos/2021/20211116a - Integración de Webmail con SSOWeb adAS/saml20-idp-remote.php",
+		"/D/Proyectos/2020/20200609a - Reserva de Recursos - Integración con Circuit/instrucciones.txt",
+		"/D/Proyectos/2020/20200630a - Reserva de Recursos - Restricciones sobre token Circuit/instrucciones.txt",
+		"/D/Proyectos/2020/20200625a - Reserva de Recursos - Activación integración con Circuit/instrucciones.txt",
+		"/D/Proyectos/2020/20201005a - Actualización Reserva de Recursos 1.15.0.0/instrucciones.txt",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/sso.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/simplesamlphp/metadata/saml20-idp-remote.php--orig.php",
+		"/C/Users/jcastano/AppData/Local/Temp/7zO08C5368A/sandetel_login.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/config/sso-config.php.inc",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es-old/webmail/index.php",
+		"/C/Users/jcastano/Downloads/instrucciones.txt",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/autologon/composer.json",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/persistent_login/persistent_login.js",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/plugins/autologon/autologon.php",
+		"/D/Proyectos/2021/20211022a - Actualización ceritificado APNS P3S/instrucciones.txt",
+		"/D/Proyectos/2021/20211014a - Webmail - Mejoras en el tratamiento de errores SSOWeb/instrucciones.txt",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/skins/larry_sandetel/styles.css",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/skins/larry_sandetel/login_prod/login_styles.css",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/simplesamlphp/modules/core/www/postredirect.php",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/skins/larry_sandetel/pace/pace.css",
+		"/D/Proyectos/remote/desccobuz05/correo.juntadeandalucia.es/skins/larry_sandetel/pace/pace.min.js",
+		"/D/temp/mc/indev/minecraft_indev.patch",
+		"/D/Proyectos/2021/20210924a - Corrección enlace declaración accesibilidad Webmail/instrucciones.txt",
+		"/D/cosas/eclipse/eclipse-workspace/modloader/src/BaseMod.java",
+		"/D/Proyectos/2021/20210908b - Nuevo login - Webmail/instrucciones.txt",
+		"/D/Proyectos/2021/20210723a - Consigna v2.9.0.0 - API REST consulta invitaciones y notificaciones email/instrucciones.txt",
+		"/D/Proyectos/2021/20210702b - Actualización de PHP y configuración de Cacheo en Ficheros Junta/instrucciones.md",
+		"/D/git-corp/webmail-corporativo/README.md"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 134.0,
+		"where_history":
+		[
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins\\password",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\config",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\config",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\skins\\larry_sandetel",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old\\webmail",
+			"D:\\Proyectos\\remote\\desccobuz05",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\skins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\skins\\larry_sandetel",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\skins\\larry_sandetel\\templates",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program\\js",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins\\enigma",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins\\avelsieve",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins\\calendar",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old\\webmail",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program\\steps",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program\\steps\\mail",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old\\webmail",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins\\sandetel",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins\\sandetel_login",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old\\webmail\\plugins\\password",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins\\password",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old\\webmail\\plugins\\password",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins\\password",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program\\lib",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\skins\\larry_sandetel",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins\\password",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\skins\\larry_sandetel",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\sts-php-client-lib",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\sts-php-client-lib\\config",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old\\webmail",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\plugins",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-2.9.0.0",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old\\webmail",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\skins\\larry_sandetel",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\ayuda",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es-old",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es\\program",
+			"D:\\Proyectos\\remote\\desccobuz05\\correo.juntadeandalucia.es"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"regenerate_token_whitelist",
+			"debug",
+			"janombreapellido",
+			"write_log",
+			"cn",
+			"write_log",
+			"sso",
+			"check_pass_caducado",
+			"resolve_host",
+			"check_mail_from_ldap",
+			"check_uidshort",
+			"sso_authenticate",
+			"check_uidshort",
+			"write_log ('sand",
+			"password_force_new_user",
+			"No handler found",
+			"pass_caducado_redirect",
+			"check_pass_caducado",
+			"checking passcaducado",
+			"log_sandetel",
+			"write_log",
+			"sandetel",
+			"check_request",
+			"Request security check failed",
+			"'servererror'",
+			"error de servidor",
+			"Error de servidor!",
+			"Error de Servidor",
+			").val(",
+			"$",
+			"_token",
+			"name=_token",
+			"request_token",
+			"regencsrf",
+			"upload_progress_update",
+			"token",
+			"upload_progress_update",
+			"move_messages",
+			"output->command",
+			"command",
+			"token",
+			"output",
+			"js_commands",
+			"command",
+			"request_token",
+			"write_log",
+			"token",
+			"request_security_check",
+			"check_request",
+			"request_security_check",
+			"check_request",
+			"token",
+			"csrf",
+			"startup",
+			"__construct",
+			"task",
+			"ask",
+			"SPAM",
+			"logging.level",
+			"log",
+			"'([a-z\\.]+)',",
+			"('[a-z\\.]+')",
+			"1970-01-01",
+			"@juntadeandalucia.es",
+			"(.+)\\n",
+			"beep",
+			"nodeValue",
+			"kill_",
+			"get_request_token",
+			"token",
+			"csrf",
+			"samba",
+			"md4",
+			"uidshort",
+			"password_force",
+			"password_foce",
+			"JAwinFlag",
+			"jawinflag",
+			"ul",
+			"squirre",
+			"identity_create",
+			"insert_identity",
+			"html_signature",
+			"Rows",
+			"20220315",
+			"1.23.0.0",
+			"andres.oyola",
+			"debug",
+			"rcmail::write_log",
+			"matomo",
+			"servicio andaluz de salud",
+			"sas",
+			"sspa",
+			"login_rate_limit",
+			"brute",
+			"max_recipients",
+			"loadTimeData",
+			"0203",
+			"check_agata",
+			"<?",
+			"ayuda",
+			"contraseña o",
+			"contraseña",
+			"nombre de usuario",
+			"check_mail_from_ldap",
+			"default_host",
+			"ldap",
+			"cert",
+			"key",
+			"cert",
+			"apache-tomcat-5.5.26",
+			"sso",
+			"ssook",
+			"outer_space",
+			"$SSOconfig",
+			"logout",
+			"check_mail_from_ldap",
+			"authenticate",
+			"sso_authenticate",
+			"x509",
+			"sso",
+			"x509",
+			"Validando su ses",
+			"Validando su sesión. Por favor, espere...",
+			"webmail",
+			"login",
+			"sso",
+			"cookie"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"error",
+			"id like '%\\1' or ",
+			"",
+			"'\\1',",
+			"20220527",
+			"1.25.0.0",
+			"josel.castano",
+			"0211",
+			"<?php",
+			"tomcat",
+			"",
+			"webmail",
+			"/login",
+			"20210708",
+			"    /var/www/html/correo.juntadeandalucia.es/",
+			"masinfo",
+			"",
+			"+",
+			"userinfo",
+			"superadmin",
+			"facturacion",
+			"24a",
+			"$this::",
+			"imap_utf7_decode",
+			"$this::",
+			"$this",
+			"16",
+			"rcmail::write_log",
+			"rcm",
+			"rcmail::write_log",
+			"config",
+			"sprintf(\"%.8f\", round( $t2 - $t1, 8))",
+			"$t1, 8)",
+			"round ($t2 - $t1, 6)",
+			"\"\"",
+			"'debug', $this_exe_id . \" \" . ",
+			"$t1 = $t2;",
+			"$config ['\\1']",
+			"<pre>",
+			"'errors'",
+			"$this->write_log",
+			"$this->config",
+			"'panic_debug'",
+			"$RCMAIL->write_log",
+			"$this->log_sandetel (",
+			"if ($this->verbose_log) rcmail::write_log (\"sandetel\", \"[\"",
+			"rcmail::write_log",
+			"loga_and_die",
+			"234.53",
+			"$this->rcube_sandetel->mail",
+			"<?php",
+			"rcmail::write_log",
+			"#ddd",
+			"!important; padding:0; margin: 0 20px 20px 0;",
+			"ee solid !important;",
+			"width=150 style=\"border: 1px #eee solid\"",
+			"reserva_app",
+			"1436960195",
+			"reserva_icon.png",
+			"Reserva de Recursos",
+			"RRApp",
+			"ChromeUtils.import",
+			"20181022",
+			"rcmail::get_instance()->gettext(\\1)",
+			"rcube_utils::rep_specialchars_output(\\1, 'html', 'strict', true)",
+			"rcube_utils::rep_specialchars_output(\\1, 'js')",
+			"rcmail::write_log",
+			"rcmail::get_instance()->db->table_name(\\1)",
+			"/var/tmp/correo.juntadeandalucia.es",
+			"- ",
+			"rcmail::write_log",
+			"write_log (\"bedework\", \\1);",
+			"if ($this->debug)",
+			"bedework",
+			"bedeworks",
+			"tabCCUtilidades25",
+			"$this->rcube_sandetel->mail",
+			"$this->rcube_sandetel",
+			"rcube_utils::get_input_value",
+			"starts-with",
+			"agata_",
+			"087021",
+			"021908",
+			"000",
+			"#087021",
+			"#021908",
+			"#087021",
+			"888",
+			"444",
+			"333333",
+			"04320F",
+			"020",
+			"087021",
+			"~",
+			"this->rcube_sandetel",
+			"`contacts`",
+			"rcube::w",
+			"RCMAIL::write_log (\"debug\", ",
+			"loga (",
+			"444",
+			"222",
+			"consigna",
+			"666",
+			"777",
+			"this->rc->",
+			"vacation",
+			"c7c7c7",
+			"e9e9e9",
+			"00a400",
+			"01b401",
+			"005800",
+			"007600",
+			"66d966",
+			"087021",
+			"7,128,33",
+			"537253",
+			"6a9f6a",
+			"85b582",
+			"config",
+			"F8",
+			"DB",
+			"$patata",
+			"bookmarks",
+			"empty",
+			"is_empty",
+			"bookmarks",
+			"BOOKMARK",
+			"bookmark"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "utils/mkts_om.bas",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 45556,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Syntax QBasic/QBasic.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SFTP":
+	{
+		"height": 57.0
+	},
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 237.0
+	},
+	"pinned_build_system": "",
+	"project": "saimazoom.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Proyectos\\remote\\desres01.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 299.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
