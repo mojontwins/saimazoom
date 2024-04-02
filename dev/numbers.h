@@ -9,123 +9,126 @@ unsigned char nc;
 // 4 digit numbers used in time, score and water are stored as 4 byte arrays
 // These routines increment or decrement such numbers
 
-void __fastcall__ number_reset (unsigned char *number) {
+// Make number = 0000
+void __FASTCALL__ number_reset (unsigned char *number) {
 	#asm
 			// Fastcall puts the 16 bit parameter into HL
 
-			ld  e, (hl)
-			inc hl 
-			ld  d, (hl)
-
 			xor a 
-			ld  (de), a
-			inc a
-			ld  (de), a
-			inc a
-			ld  (de), a
-			inc a
-			ld  (de), a
+
+		.number_fill
+			ld  (hl), a
+			inc hl
+			ld  (hl), a
+			inc hl
+			ld  (hl), a
+			inc hl
+			ld  (hl), a
 
 	#endasm
 }
 
-void __fastcall_ number_increment (unsigned char *number) {
+// Make number = 9999
+void __FASTCALL__ number_set (unsigned char *number) {
 	#asm
 			// Fastcall puts the 16 bit parameter into HL
-			ld  e, (hl)
-			inc hl 
-			ld  d, (hl)
-			
+
+			ld  a, 9
+			jp  number_fill			
+
+	#endasm
+}
+
+
+void __FASTCALL__ number_increment (unsigned char *number) {
+	#asm
 			// Number "1234" is stored backwards as "4321", so 			
 			
-			ld  a, (de)
+			ld  a, (hl)
 			inc a 			// Increment current digit
 						
 			cp  10  		// Has this digit overflowed?
 			jr  nz, ni_end 	// If no overflow, we're done
 
 			xor a 
-			ld  (de), a 	// Write a 0
+			ld  (hl), a 	// Write a 0
 
-			inc de 			// Next digit.
+			inc hl 			// Next digit.
 
-			ld  a, (de)
+			ld  a, (hl)
 			inc a 			// Increment current digit
 						
 			cp  10  		// Has this digit overflowed?
 			jr  nz, ni_end 	// If no overflow, we're done
 
 			xor a 
-			ld  (de), a 	// Write a 0
+			ld  (hl), a 	// Write a 0
 
-			inc de 			// Next digit.
+			inc hl 			// Next digit.
 
-			ld  a, (de)
+			ld  a, (hl)
 			inc a 			// Increment current digit
 						
 			cp  10  		// Has this digit overflowed?
 			jr  nz, ni_end 	// If no overflow, we're done
 
 			xor a 
-			ld  (de), a  	// Write a 0
+			ld  (hl), a  	// Write a 0
 
-			inc de 			// Next digit.
+			inc hl 			// Next digit.
 
-			ld  a, (de)
+			ld  a, (hl)
 			inc a  			// Increment last digit. Don't care for overflows
 
 		.ni_end
-			ld  (de), a 
+			ld  (hl), a 
 
 			// If the last digit overflows -> do nothing, this WON'T HAPPEN			
 	#endasm
 }
 
-void __fastcall__ number_decrement (unsigned char *number) {
+void __FASTCALL__ number_decrement (unsigned char *number) {
 	#asm
 			// Fastcall puts the 16 bit parameter into HL
-			ld  e, (hl)
-			inc hl 
-			ld  d, (hl)
-
-			ld  a, (de)
+	
+			ld  a, (hl)
 			dec a 
 			cp  255 		// Has this digit overflowed?
 
 			jr  nz, nd_end 	// No overflow, we're done 
 
 			ld  a, 9 
-			ld  (de), a  	// Write a 9
+			ld  (hl), a  	// Write a 9
 
-			inc de  		// Next digit
+			inc hl  		// Next digit
 
-			ld  a, (de)
+			ld  a, (hl)
 			dec a 
 			cp  255 		// Has this digit overflowed?
 
 			jr  nz, nd_end 	// No overflow, we're done 
 
 			ld  a, 9 
-			ld  (de), a  	// Write a 9
+			ld  (hl), a  	// Write a 9
 
-			inc de  		// Next digit
+			inc hl  		// Next digit
 
-			ld  a, (de)
+			ld  a, (hl)
 			dec a 
 			cp  255 		// Has this digit overflowed?
 
 			jr  nz, nd_end 	// No overflow, we're done 
 
 			ld  a, 9 
-			ld  (de), a  	// Write a 9
+			ld  (hl), a  	// Write a 9
 
-			inc de  		// Next digit
+			inc hl  		// Next digit
 
-			ld  a, (de)
+			ld  a, (hl)
 			dec a 
 
 		.nd_end		
-			ld  (de), a 
+			ld  (hl), a 
 
 			// If the last digit overflows -> do nothing, this WON'T HAPPEN		
 	#endasm

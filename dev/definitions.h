@@ -3,49 +3,17 @@
 
 // Globals & constants
 
-#define KEY_LEFT 		0
-#define KEY_RIGHT		1
-#define KEY_UP  		2
-#define KEY_DOWN 		3
-#define KEY_BUTTON_A	4
-#define KEY_BUTTON_B	5
-#define KEY_ENTER		6
-#define KEY_ESC			7
-#define KEY_AUX1		8
-#define KEY_AUX2		9
-#define KEY_AUX3 		10
-#define KEY_AUX4 		11
-
-typedef struct sprite {
-	unsigned int sp0;			// 0
-	unsigned int sp1; 			// 2
-	unsigned int coord0;
-	signed char cox, coy;		// 6 7
-	unsigned char cx, cy; 		// 8 9
-	unsigned char ox, oy;		// 10 11
-	void *invfunc;				// 12
-	void *updfunc;				// 14
-} SPR;
-
-SPR sp_sw [SW_SPRITES_ALL] 					@ BASE_SPRITES;
-unsigned char *spr_next [SW_SPRITES_ALL] 	@ BASE_SPRITES + (SW_SPRITES_ALL)*16;
-unsigned char spr_on [SW_SPRITES_ALL]		@ BASE_SPRITES + (SW_SPRITES_ALL)*18;
-unsigned char spr_x [SW_SPRITES_ALL]		@ BASE_SPRITES + (SW_SPRITES_ALL)*19;
-unsigned char spr_y [SW_SPRITES_ALL]		@ BASE_SPRITES + (SW_SPRITES_ALL)*20;
-
-unsigned char isr_player_on;
-unsigned char pattern_line_ct;
-
-// 
 
 #define DIRECTION_UP       0
 #define DIRECTION_RIGHT    1
 #define DIRECTION_DOWN     2
 #define DIRECTION_LEFT     3
 
-#define STATE_IDLE         0
-#define STATE_WALK         1
-#define STATE_OFF          2
+#define STATE_OFF          0
+#define STATE_APPEARING    1
+#define STATE_IDLE         2
+#define STATE_WALK         3
+#define STATE_KILLED       4
 
 #define ITEM_EMPTY         0
 #define ITEM_CAFE          1
@@ -56,6 +24,26 @@ unsigned char pattern_line_ct;
 #define ITEM_KNIFE         6
 #define ITEM_WATER         7
 
+#define OBJ_SACK           20
+#define OBJ_PISTOL         21
+#define OBJ_KEY            22
+#define OBJ_BOAT           23
+#define OBJ_PICKAXE        24
+#define OBJ_SABER          25
+#define OBJ_WATER          26
+#define OBJ_EMPTY          27
+
+#define MAX_SACKS 			4
+#define MAX_KEYS            2
+#define MAX_WATERS         16
+#define MAX_BOATS           4
+#define MAX_SABERS          6
+#define MAX_PICKAXES        4
+#define MAX_PISTOLS         6
+
+#define MAX_OBJECTS        MAX_SACKS + MAX_KEYS + MAX_WATERS + MAX_BOATS + MAX_SABERS + MAX_PICKAXES + MAX_PISTOLS
+#define MAX_PERSISTENT     MAX_SABERS + MAX_PICKAXES
+
 signed char dx [] = { 0, 1, 0, -1 };
 signed char dy [] = { -1, 0, 1, 0 };
 
@@ -65,34 +53,55 @@ unsigned char px, py;
 unsigned char ptx, pty;
 signed char pmx, pmy;
 unsigned char pstate, pct;
-
 unsigned char pdirection;
+unsigned char pstep;
+unsigned char pfacing;
+unsigned char pcooldown;
 
 // Enem
 
 unsigned char ex, ey;
 unsigned char etx, ety;
-unsigned char emx, emy;
+signed char emx, emy;
 unsigned char estate, ect;
-
 unsigned char edirection;
-
 unsigned char eattempts;
+unsigned char estep;
+unsigned char etype;
+
+// Objects
+
+unsigned char object_n_pant [MAX_OBJECTS];
+unsigned char object_yx [MAX_OBJECTS];
+unsigned char object_id [MAX_OBJECTS];
+unsigned char oid;
+
+// Tile persistence (tiles cleared must stay cleared)
+
+unsigned char persistence_n_pant [MAX_PERSISTENT];
+unsigned char persistence_yx [MAX_PERSISTENT];
+unsigned char pid;
 
 // general
 
 unsigned char map_attr [56] @ BASE_ROOM_BUFFERS;
 
-unsigned char n_pant;
+unsigned char n_pant, o_pant;
 unsigned char playing;
-unsigned char _x, _y, _t, rda, rdb, rdc, gpit;
+unsigned char _x, _y, _t, rda, rdb, rdc, rdm;
+unsigned char *gp_gen;
+unsigned char flip_flop;
+
+unsigned char n_time  [] = { 0, 0, 0, 0 };
+unsigned char n_water [] = { 0, 0, 0, 0 };
 
 // 8 obstacle
 // 1 river
 // 2 plant
 // 4 rock
-// 16 key
+// 16 lock
 
 unsigned char tile_behs [] = {
-	10, 8, 8, 24, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 10, 10, 8, 8, 10, 8, 12, 8
+	 0, 10,  8,  8, 24,  8,  9,  9,  9,  9,
+	 9,  9, 10, 10, 10, 10,  8, 12,  8, 10
 };

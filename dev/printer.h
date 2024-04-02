@@ -41,30 +41,37 @@ void draw_tile(unsigned char x, unsigned char y, unsigned char t) {
 			add hl, sp 			// Three parameters
 
 			ld  c, (hl) 		// x
-			ld  a, c 
-			add a, a 
-			add a, c 
-			ld  c, a 			// x3
-
 
 			dec hl
 			dec hl
 			ld  b, (hl) 		// y
-			ld  a, b 
-			add a, a
-			add a, b 
-			ld  b, a 			// x3
 
 			dec hl
 			dec hl
 			ld  a, (hl) 		// t
 
 		.draw_tile_direct
-			// Assumes BC = YX, A = T
+			// Assumes BC = YX, A = T, tile coodinates
+			ld  d, a 			// Save T
+
+			// Tile to cell coordinates:
+			ld  a, c 
+			add a, a 
+			add a, c 
+			ld  c, a 			// x3
+
+			ld  a, b 
+			add a, a
+			add a, b 
+			ld  b, a 			// x3
+
+			ld  a, d 			// Get T back
+
+		.draw_tile_direct2
+			// Assumes BC = YX, A = D = T, tile coodinates
 
 			// We have 27 tiles, 27 * 9 = 243, so we do 8bit math
 			// Calculate metatile address; t * 9 = (t * 8) + t
-			ld  d, a 			// Save for later
 			add a, a 
 			add a, a
 			add a, a 			// A = T * 8
@@ -76,7 +83,7 @@ void draw_tile(unsigned char x, unsigned char y, unsigned char t) {
 			add hl, de 			// HL = metatile address
 
 			push hl 			// Save
-			call _nametable_address 	// this destroys HL!
+			call _nametable_address 	// this destroys HL, returns address in DE
 			pop hl 				// Get it back
 
 			// Copy three patterns
@@ -105,14 +112,84 @@ void draw_tile(unsigned char x, unsigned char y, unsigned char t) {
 			ldi 
 			ldi 				
 			
+			ret
 	#endasm
 }
 
-void draw_map (void) {
-	// Draws room "n_pant". Screens are 8x7 or 56 metatiles big
-	// 100 * 56 = 5600 so 16 bits math is needed to make the calculations.
-	// N * 56 = N * 32 + N * 16 + N * 8
+void invalidate_tile (unsigned char x, unsigned char y) {
+	#asm
+			ld  hl, 4
+			add hl, sp 			// Two parameters
 
+			ld  c, (hl) 		// x
+
+			dec hl
+			dec hl
+			ld  b, (hl) 		// y
+
+		.invalidate_tile_direct
+			// Assumes BC = YX, tile coodinates
+
+			// Tile to cell coordinates:
+			ld  a, c 
+			add a, a 
+			add a, c 
+			ld  c, a 			// x3
+
+			ld  a, b 
+			add a, a
+			add a, b 
+			ld  b, a 			// x3
+
+		.invalidate_tile_direct2
+			// Assumes BC = YX, cell coordinates
+
+			// BC = YX; calculates D = B + 2, E = C + 2
+
+			ld  a, 2
+			add b 
+			ld  d, a 
+
+			ld  a, 2
+			add c 
+			ld  e, a 
+
+			call cpc_InvalidateRect
+	#endasm
+}
+
+// Called ingame. Removes tile _x, _y from screen and buffer
+void clear_tile(void) {
+	#asm 
+			ld  a, (__y)
+			sla a
+			sla a
+			sla a
+			ld  c, a
+			ld  a, (__x)
+			or  c 
+
+			ld  h, 0 
+			ld  l, a 
+			ld  de, _map_attr 
+			add hl, de 
+
+			xor a 
+			ld  (hl), 0
+
+			ld  a, (__x)
+			ld  c, a 
+			ld  a, (__y)
+			ld  b, a 
+			push bc
+			xor a 
+			call draw_tile_direct
+			pop bc 
+			call invalidate_tile_direct
+	#endasm
+}
+
+void get_pointer_to_n_pant_in_hl (void) {
 	#asm
 			ld  hl, (_n_pant)
 			ld  h, 0
@@ -133,8 +210,22 @@ void draw_map (void) {
 			add hl, bc 			// N * 32 + N * 16
 			add hl, de 			// N * 32 + N * 16 + N * 8
 
-			ld  de, _map 
+			ld  de, _mapa
 			add hl, de 			// HL points to room n_pant
+	#endasm
+}
+
+void draw_map (void) {
+	// Draws room "n_pant". Screens are 8x7 or 56 metatiles big
+	// 100 * 56 = 5600 so 16 bits math is needed to make the calculations.
+	// N * 56 = N * 32 + N * 16 + N * 8
+
+	#asm
+			xor a
+			ld  (__x), a
+			ld  (__y), a
+
+			call _get_pointer_to_n_pant_in_hl
 
 			ld  de, _map_attr
 
@@ -185,6 +276,55 @@ void draw_map (void) {
 
 			pop bc 
 			djnz draw_map_loop
+		.draw_map_done
+	#endasm
+}
+
+void print_number(void) {
+	// Prints number pointed by _gp_gen at (_x, _y).
+	// Remember that numbers are stored backwards!
+	#asm
+		// Calculate initial nametable address.
+		ld  a, (__x)
+		add 3 					// Remember, numbers are stored backwards.
+		ld  c, a
+		ld  a, (__y)
+		ld  b, a 
+
+		push bc 				// Save for later (last position to invalidate)
+
+		call _nametable_address
+		ld  hl, (_gp_gen) 
+		
+		ld  a, (hl)
+		inc hl 
+		ld  (de), a 
+		dec de
+
+		ld  a, (hl)
+		inc hl 
+		ld  (de), a 
+		dec de
+
+		ld  a, (hl)
+		inc hl 
+		ld  (de), a 
+		dec de
+
+		ld  a, (hl)
+		inc hl 
+		ld  (de), a 		
+
+		// Invalidate
+	.print_number_inv
+		pop de 
+		ld  b, d
+		ld  c, e 
+		dec c
+		dec c
+		dec c
+		
+		call cpc_InvalidateRect
 
 	#endasm
 }

@@ -209,4 +209,14 @@ void init (void) {
 		ei
 	#endasm
 
+	// Put keys "1" and "2" into CPCRSLIB controller structure
+	// So the menu works.
+
+	#asm
+			ld  hl, 0x4801 		// Code for "1"
+			ld  (cpc_KeysData + 32), hl 
+			ld  hl, 0x4802      // Code for "2"
+			ld  (cpc_KeysData + 34), hl 
+	#endasm
+
 }

@@ -11,10 +11,11 @@ extern unsigned char tsmaps [0];
 		XDEF tiles
 	._tileset
 	.tiles
-		BINARY "../bin/ts.bin"   
+		BINARY "../bin/numbers.bin" 	// 10 patterns
+		BINARY "../bin/ts.bin" 
 
 	._tmaps
-		BINARY "../bin/tsmaps.bin"
+		BINARY "../bin/tsmaps.bin" 		// tsmaps start @ pattern 10, of course.
 #endasm
 
 

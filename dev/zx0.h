@@ -71,12 +71,3 @@ unsigned int ram_destination;
 	        jr      dzx0s_elias_loop
 	; -----------------------------------------------------------------------------
 #endasm
-
-void unpack (unsigned int address, unsigned int destination) {
-	ram_address = address; ram_destination = destination;
-	#asm
-		ld hl, (_ram_address)
-		ld de, (_ram_destination)
-		call dzx0_standard
-	#endasm
-}
