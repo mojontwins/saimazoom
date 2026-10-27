@@ -115,11 +115,18 @@ void init_objects (void) {
 void init_room_objects (void) {
 	for (gpit = 0; gpit < MAX_OBJECTS; gpit ++) {
 		if (object_n_pant [gpit] == n_pant) {
-			// Mark as object:
-			map_attr [rda = object_yx [gpit]] = 40; 	// which is 8 (obstacle) | 32 (object)
+			rda = object_yx [gpit];
+			if (object_id [gpit] == OBJ_NONE) {
+				// Agua ya bebida: casilla libre (BASIC 1340)
+				map_attr [rda] = 0;
+				draw_tile (rda & 7, rda >> 3, 0);
+			} else {
+				// Mark as object:
+				map_attr [rda] = 40; 	// which is 8 (obstacle) | 32 (object)
 
-			// Draw
-			draw_tile (rda & 7, rda >> 3, object_id [gpit]);
+				// Draw
+				draw_tile (rda & 7, rda >> 3, object_id [gpit]);
+			}
 		}
 	}
 }

@@ -32,14 +32,16 @@
 #define OBJ_SABER          25
 #define OBJ_WATER          26
 #define OBJ_EMPTY          27
+#define OBJ_NONE           0xff 	// Objeto consumido (agua bebida): la casilla queda libre
 
 #define MAX_SACKS 			4
 #define MAX_KEYS            2
-#define MAX_WATERS         16
-#define MAX_BOATS           4
-#define MAX_SABERS          6
-#define MAX_PICKAXES        4
-#define MAX_PISTOLS         6
+// Cantidades del original (BASIC 2590)
+#define MAX_WATERS         12
+#define MAX_BOATS           8
+#define MAX_SABERS          5
+#define MAX_PICKAXES        5
+#define MAX_PISTOLS        10
 
 #define MAX_OBJECTS        MAX_SACKS + MAX_KEYS + MAX_WATERS + MAX_BOATS + MAX_SABERS + MAX_PICKAXES + MAX_PISTOLS
 #define MAX_PERSISTENT     MAX_SABERS + MAX_PICKAXES
@@ -94,6 +96,14 @@ unsigned char flip_flop;
 
 unsigned char n_time  [] = { 0, 0, 0, 0 };
 unsigned char n_water [] = { 0, 0, 0, 0 };
+
+// Ritmo del original (Spectrum): cada vuelta del bucle principal BASIC hace
+// TIEMPO+1 y AGUA-7, y el jugador y el enemigo avanzan un caracter. Esa vuelta
+// dura ~4.5 frames de 50 Hz de media (2.5 parado, 4.5 andando, 5.3 con
+// enemigo). Aqui el bucle va fijo a 12.5 Hz: una vuelta = un tick del original.
+#define FRAMES_PER_TICK       4
+#define ORIG_WATER_PER_TICK   7
+
 
 // 8 obstacle
 // 1 river

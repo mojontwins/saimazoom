@@ -58,6 +58,14 @@ unsigned char draw_inventory () {
 	#endasm
 }
 
+// BASIC 1350: al gastar un objeto los de detras se corren hacia delante
+// y se suman 100 puntos.
+void inventory_remove (unsigned char slot) {
+	for (gpit = slot; gpit < 3; gpit ++) inventory [gpit] = inventory [gpit + 1];
+	inventory [3] = OBJ_EMPTY;
+	draw_inventory ();
+}
+
 unsigned char has_object (unsigned char o) {
 	for (gpit = 0; gpit < 4; gpit ++) if (inventory [gpit] == o) return gpit;
 	return 0xff;

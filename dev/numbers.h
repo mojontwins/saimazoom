@@ -135,14 +135,11 @@ void __FASTCALL__ number_decrement (unsigned char *number) {
 }
 
 void number_add (unsigned char *number1, unsigned char *number2) {
-	ni = 0; while (ni < 3) {
-		number1 [ni] += number2 [ni];
-
-		// Worst case is 9 + 9 + 1 = 19, carry still 1.
-
-		if (number1 [ni] > 9) {
-			number1 [ni] -= 10;
-			number1 [ni ++] ++; 		// Carry
-		} else break;
+	// Corregido: antes el acarreo se sumaba al mismo digito y se paraba
+	// en cuanto un digito no desbordaba, ignorando el resto de number2.
+	nc = 0;
+	for (ni = 0; ni < 4; ni ++) {
+		number1 [ni] += number2 [ni] + nc;
+		if (number1 [ni] > 9) { number1 [ni] -= 10; nc = 1; } else nc = 0;
 	}
 }

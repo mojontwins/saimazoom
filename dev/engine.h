@@ -120,29 +120,28 @@ void move_jones (void) {
 		} else {
 			// Use object?
 
-			if ((rda & 1) && (rdb = has_object (OBJ_BOAT) != 0xff)) {
-			
+			// OJO: antes era "rdb = has_object (X) != 0xff", que por precedencia
+			// guarda 0/1 en rdb y borraba el hueco 1 del inventario.
+			if ((rda & 1) && (rdb = has_object (OBJ_BOAT)) != 0xff) {
+
 				// Advance player twice in the current direction
 				_x += pmx; _y += pmy;
 				if (attr (_x, _y) == 0) {
-					inventory [rdb] = OBJ_EMPTY;
+					inventory_remove (rdb); score_add (100);
 					ptx = _x; pty = _y;
 					sync_coodinates ();
-					draw_inventory ();
 				}
-			} else if ((rda & 2) && (rdb = has_object (OBJ_SABER) != 0xff)) {
-				inventory [rdb] = OBJ_EMPTY;
-				draw_inventory ();
+			} else if ((rda & 2) && (rdb = has_object (OBJ_SABER)) != 0xff) {
+				inventory_remove (rdb); score_add (100);
 				clear_tile ();
 				persist ();
-			} else if ((rda & 4) && (rdb = has_object (OBJ_PICKAXE) != 0xff)) {
-				inventory [rdb] = OBJ_EMPTY;
-				draw_inventory ();
+			} else if ((rda & 4) && (rdb = has_object (OBJ_PICKAXE)) != 0xff) {
+				inventory_remove (rdb); score_add (100);
 				clear_tile ();
 				persist ();
-			} else if ((rda & 16) && (rdb = has_object (OBJ_KEY) != 0xff)) {
-				// Key is not consumed?
-				clear_tile ();
+			} else if (rda & 16) {
+				// Puerta de cueva: con llave (no se gasta) te teletransporta
+				if (has_object (OBJ_KEY) != 0xff) cave_door ();
 			} else if (rda & 32) {
 				// Object?
 				if (pcooldown == 0) {
@@ -153,20 +152,24 @@ void move_jones (void) {
 
 					// Special case: water
 					if (rda == OBJ_WATER) {
-						object_id [oid] = OBJ_EMPTY;
+						// BASIC 1100: puntos + (9999 - agua) / 15, agua = 9999
+						// y la casilla queda libre.
+						object_id [oid] = OBJ_NONE;
+						score_add ((9999 - number_value (n_water)) / 15);
 						number_set (n_water);
+						clear_tile ();
 					} else {
 						// Inventory shift
 						object_id [oid] = inventory_shift (rda);
 						draw_inventory ();
-					}
 
-					// Update on screen
-					draw_tile (_x, _y, object_id [oid]);
-					invalidate_tile (_x, _y);
+						// Update on screen
+						draw_tile (_x, _y, object_id [oid]);
+						invalidate_tile (_x, _y);
+					}
 					
-					// Cooldown 10 frames
-					pcooldown = 10;
+					// Cooldown 5 vueltas (400 ms, lo mismo que antes a 25 fps)
+					pcooldown = 5;
 				} else {
 					pcooldown --;
 				}
@@ -201,8 +204,8 @@ void move_malote (void) {
 
 	switch (estate) {
 		case STATE_OFF:
-			// Make appear? 
-			if ((rand () & 15) == 0) {
+			// Make appear? Original: RND < 1000 (3%) por tick (BASIC 130)
+			if (rand () < 8) {
 				eattempts = 3;
 
 				// Select somewhere
@@ -219,7 +222,7 @@ void move_malote (void) {
 				if (estate == STATE_APPEARING) {
 					ex = (etx << 1) + etx;
 					ey = (ety << 1) + ety;
-					ect = 10; estep = 0;
+					ect = 8; estep = 0; 	// 8 ticks de aparicion, como el original (BASIC 870)
 					etype = 8; 	// Sprite ID of "puff"
 				}
 			}
@@ -248,8 +251,20 @@ void move_malote (void) {
 			break;
 
 		default:
-			// Move at random, if possible
-			rda = rand() & 7; if (rda < 4) {
+			// BASIC 450-510: 30% va hacia el jugador (primero en vertical),
+			// 34% elige direccion al azar, 36% se queda quieto.
+			rda = rand ();
+			if (rda < 78) {
+				if (pty < ety) rda = DIRECTION_UP;
+				else if (pty > ety) rda = DIRECTION_DOWN;
+				else if (ptx > etx) rda = DIRECTION_RIGHT;
+				else if (ptx < etx) rda = DIRECTION_LEFT;
+				else rda = 0xff;
+			} else if (rand () < 125) {
+				rda = rand () & 3;
+			} else rda = 0xff;
+
+			if (rda != 0xff) {
 				emx = dx [rda]; emy = dy [rda];
 
 				// Can move?
@@ -360,12 +375,13 @@ void main_loop (void) {
 	number_set (n_water);
 	number_reset (n_time);
 
-	while (playing) {
-		flip_flop ^= 1;
+	// Init rules
+	lives = 3; draw_lives ();
+	score = 0; score_add (0);
+	door_visited = 0;
+	game_result = RESULT_ABORT;
 
-		if (flip_flop) number_increment (n_time);
-		number_decrement (n_water);
-		number_decrement (n_water);
+	while (playing) {
 
 		if (n_pant != o_pant) { 
 			draw_map ();
@@ -384,11 +400,13 @@ void main_loop (void) {
 		// Update sprites
 		update_sprites ();
 
-		// Sync
+		// Sync: 12.5 Hz fijos (FRAMES_PER_TICK frames de 50 Hz por vuelta).
+		// Si una vuelta tarda mas (cambio de sala), cuenta como un solo tick,
+		// igual que en el original, porque isr_c2 se pone a 0.
 		#asm
 			.ml_min_faps_loop
 				ld  a, (isr_c2)
-				cp  2
+				cp  FRAMES_PER_TICK
 				jr  c, ml_min_faps_loop
 
 			.ml_min_faps_loop_end
@@ -396,8 +414,28 @@ void main_loop (void) {
 				ld  (isr_c2), a
 		#endasm
 
+		// Tick del original.
+		// Tiempo. BASIC 140: con 9999 se acaba la partida ("SIN TIEMPO")
+		number_increment (n_time);
+		if (n_time [0] == 9 && n_time [1] == 9 && n_time [2] == 9 && n_time [3] == 9) {
+			game_result = RESULT_TIME; playing = 0; break;
+		}
+
+		// Agua. BASIC 210: -7; si llega a 0, pierde una vida y vuelve a 9999
+		rda = ORIG_WATER_PER_TICK; while (rda --) {
+			if ((n_water [0] | n_water [1] | n_water [2] | n_water [3]) == 0) break;
+			number_decrement (n_water);
+		}
+		if ((n_water [0] | n_water [1] | n_water [2] | n_water [3]) == 0) {
+			number_set (n_water);
+			lose_life ();
+		}
+		if (playing == 0) break;
+		if (o_pant == 0xff) continue; 	// Ha perdido una vida: redibujar
+
 		// Draw numbers in hud
 		_x = 26;
+		_y = SCORE_Y; gp_gen = n_score; print_number ();
 		_y = 9; gp_gen = n_time; print_number ();
 		_y = 12; gp_gen = n_water; print_number ();
 
@@ -408,11 +446,12 @@ void main_loop (void) {
 		if (estate > STATE_APPEARING) {
 			if (px >= ex - 2 && px <= ex + 2 && py >= ey - 2 && py <= ey + 2) {
 				if ((rdb = has_object (OBJ_PISTOL)) != 0xff) {
-					inventory [rdb] = OBJ_EMPTY;
+					inventory_remove (rdb); score_add (100);
 					estate = STATE_KILLED;
-					ect = 10; etype = 8;
+					ect = 5; etype = 8; 	// 400 ms, como antes a 25 fps
 				} else {
-					o_pant = 0xff; 		// Force re-enter screen
+					// BASIC 930 -> 270: pierde una vida
+					lose_life ();
 					continue;
 				}
 			}
@@ -438,5 +477,12 @@ void main_loop (void) {
 			n_pant += 10;
 			pty = py = 0;
 		}
+
+		check_win ();
+
+		// El original vuelve al menu con "r"
+		if (cpc_TestKey (KEY_ESC)) playing = 0;
 	}
+
+	game_end ();
 }

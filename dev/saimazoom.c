@@ -37,6 +37,7 @@
 #include "objects.h"
 #include "inventory.h"
 #include "persistence.h"
+#include "rules.h"
 #include "engine.h"
 
 #include "wyz/efectos.h"
